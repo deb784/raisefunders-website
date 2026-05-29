@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found — RaiseFunders</title>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .notfound-page {
+      min-height: 100vh;
+      background: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .notfound-page::before {
+      content: '';
+      position: absolute;
+      top: -20%; right: -5%;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(107,191,63,.12) 0%, transparent 65%);
+    }
+    .notfound-content {
+      text-align: center;
+      max-width: 560px;
+      padding: 40px 24px;
+      position: relative;
+      z-index: 2;
+    }
+    .notfound-num {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: clamp(5rem, 20vw, 10rem);
+      color: transparent;
+      -webkit-text-stroke: 3px var(--green-light);
+      line-height: 1;
+      margin-bottom: 16px;
+      opacity: .5;
+    }
+    .notfound-content h1 { color: var(--white); margin-bottom: 16px; font-size: 1.8rem; }
+    .notfound-content p  { color: rgba(255,255,255,.7); margin-bottom: 32px; }
+    .notfound-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 320px;
+      margin: 0 auto 32px;
+    }
+    .notfound-links a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 20px;
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.1);
+      color: rgba(255,255,255,.8);
+      font-size: .9rem;
+      transition: background var(--transition), border-color var(--transition);
+    }
+    .notfound-links a:hover { background: rgba(107,191,63,.12); border-color: rgba(107,191,63,.3); color: var(--white); }
+    .notfound-links a i { color: var(--green-light); width: 16px; }
+    .notfound-logo {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: var(--white);
+      margin-bottom: 40px;
+      display: block;
+    }
+    .notfound-logo span { color: var(--green-light); }
+  </style>
+</head>
+<body>
+  <main id="main-content">
+    <section class="notfound-page" aria-labelledby="notfound-heading">
+      <div class="notfound-content">
+        <a href="index.html" class="notfound-logo"><span>$raise</span>funders</a>
+        <div class="notfound-num">404</div>
+        <h1 id="notfound-heading">Page Not Found</h1>
+        <p>The page you're looking for doesn't exist or may have moved. Here are some helpful links to get you back on track.</p>
+        <div class="notfound-links">
+          <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+          <a href="how-it-works.html"><i class="fa-solid fa-gears"></i> How It Works</a>
+          <a href="who-we-help.html"><i class="fa-solid fa-users"></i> Who We Help</a>
+          <a href="about.html"><i class="fa-solid fa-info-circle"></i> About Us</a>
+          <a href="faq.html"><i class="fa-solid fa-circle-question"></i> FAQ</a>
+        </div>
+        <a href="book-a-call.html" class="btn btn-primary btn-lg">
+          <i class="fa-solid fa-calendar-check"></i> Book a Free Discovery Call
+        </a>
+      </div>
+    </section>
+  </main>
+  <script src="js/main.js"></script>
+</body>
+</html>

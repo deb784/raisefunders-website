@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Free Discovery Call — RaiseFunders</title>
+  <meta name="description" content="Schedule your free 30-minute discovery call with RaiseFunders. No commitment, no sales pressure. Just an honest conversation about your organization's sponsorship potential." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .booking-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .booking-sidebar { position: sticky; top: 100px; }
+    .booking-what-to-expect {
+      background: var(--gray-light);
+      border: 1px solid var(--gray-mid);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      margin-bottom: 24px;
+    }
+    .booking-what-to-expect h3 { color: var(--navy); margin-bottom: 20px; font-size: 1.1rem; }
+    .expect-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--gray-mid);
+    }
+    .expect-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .expect-item-icon {
+      width: 36px; height: 36px; flex-shrink: 0;
+      background: rgba(107,191,63,.12);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .9rem;
+      color: var(--green-dark);
+    }
+    .expect-item h4 { font-size: .9rem; color: var(--navy); margin-bottom: 3px; }
+    .expect-item p  { font-size: .83rem; color: #5a6a5a; margin: 0; }
+
+    .booking-credibility {
+      background: var(--navy);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+    }
+    .booking-credibility h4 { color: var(--white); font-size: .9rem; margin-bottom: 16px; }
+    .cred-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: .85rem;
+      color: rgba(255,255,255,.75);
+      padding: 8px 0;
+    }
+    .cred-item i { color: var(--green-light); flex-shrink: 0; }
+
+    .booking-form-card {
+      background: var(--white);
+      border: 1px solid var(--gray-mid);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      box-shadow: var(--shadow-lg);
+    }
+    .booking-form-card h2 { color: var(--navy); margin-bottom: 8px; }
+    .booking-form-card > p { color: #5a6a5a; margin-bottom: 28px; font-size: .95rem; }
+
+    .calendly-placeholder {
+      background: var(--gray-light);
+      border: 2px dashed var(--gray-mid);
+      border-radius: var(--radius-lg);
+      padding: 48px 32px;
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    .calendly-placeholder i { font-size: 2.5rem; color: var(--green-light); margin-bottom: 16px; display: block; }
+    .calendly-placeholder h3 { color: var(--navy); margin-bottom: 8px; }
+    .calendly-placeholder p { color: #5a6a5a; font-size: .9rem; margin-bottom: 0; }
+
+    .or-divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 28px 0;
+      color: var(--gray);
+      font-size: .85rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+    }
+    .or-divider::before,
+    .or-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--gray-mid);
+    }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+    @media (max-width: 900px) {
+      .booking-layout { grid-template-columns: 1fr; }
+      .booking-sidebar { position: static; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .booking-form-card { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo" aria-label="RaiseFunders Home">
+          <img src="images/logo-wordmark-light.png"
+               alt="RaiseFunders"
+               height="46"
+          />
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="who-we-help.html">Who We Help</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a href="contact.html" class="btn btn-secondary btn-sm">Get Assessment</a>
+          <a href="book-a-call.html" class="btn btn-primary btn-sm">Book a Call</a>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle mobile menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-mobile">
+    <a href="index.html">Home</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="who-we-help.html">Who We Help</a>
+    <a href="about.html">About</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="book-a-call.html" class="btn btn-primary">Book a Free Call</a>
+  </div>
+
+  <main id="main-content">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-chevron-right"></i>
+          <span>Book a Call</span>
+        </div>
+        <span class="section-label section-label--dark">Free Discovery Call</span>
+        <h1 id="page-title">Let's Find Out What Your Organization Could Be Worth to Sponsors</h1>
+        <p class="lead">30 minutes. No commitment. No sales pitch. Just an honest conversation about your organization's assets and what a structured sponsorship program could realistically generate.</p>
+      </div>
+    </section>
+
+    <!-- BOOKING SECTION -->
+    <section class="section">
+      <div class="container">
+        <div class="booking-layout">
+
+          <!-- SIDEBAR -->
+          <aside class="booking-sidebar">
+            <div class="booking-what-to-expect">
+              <h3><i class="fa-solid fa-clipboard-list" style="color:var(--green-light);margin-right:8px;"></i>What We Cover on the Call</h3>
+              <div class="expect-item">
+                <div class="expect-item-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                <div>
+                  <h4>Quick Asset Overview</h4>
+                  <p>We walk through your email list, events, facilities, and digital presence to identify your most valuable assets.</p>
+                </div>
+              </div>
+              <div class="expect-item">
+                <div class="expect-item-icon"><i class="fa-solid fa-dollar-sign"></i></div>
+                <div>
+                  <h4>Revenue Potential Estimate</h4>
+                  <p>We give you a preliminary, honest estimate of what your organization could realistically generate from sponsorships.</p>
+                </div>
+              </div>
+              <div class="expect-item">
+                <div class="expect-item-icon"><i class="fa-solid fa-route"></i></div>
+                <div>
+                  <h4>Partnership Overview</h4>
+                  <p>We explain how RaiseFunders works, what the process looks like, and what the commitment involves on both sides.</p>
+                </div>
+              </div>
+              <div class="expect-item">
+                <div class="expect-item-icon"><i class="fa-solid fa-comments"></i></div>
+                <div>
+                  <h4>Your Questions Answered</h4>
+                  <p>You drive the agenda. Ask us anything—pricing, timeline, process, fit. We'll give you straight answers.</p>
+                </div>
+              </div>
+            </div>
+            <div class="booking-credibility">
+              <h4><i class="fa-solid fa-shield-check" style="color:var(--green-light);margin-right:8px;"></i>Our Commitment to You</h4>
+              <div class="cred-item"><i class="fa-solid fa-check-circle"></i> No pressure, no hard sell on this call</div>
+              <div class="cred-item"><i class="fa-solid fa-check-circle"></i> Honest fit assessment—we'll tell you if we're not right</div>
+              <div class="cred-item"><i class="fa-solid fa-check-circle"></i> Built by people who've coached youth sports 65+ seasons</div>
+              <div class="cred-item"><i class="fa-solid fa-check-circle"></i> Performance-based model—we win when you win</div>
+              <div class="cred-item"><i class="fa-solid fa-check-circle"></i> Based in Minneapolis, MN</div>
+            </div>
+          </aside>
+
+          <!-- BOOKING FORM -->
+          <div>
+            <div class="booking-form-card">
+              <h2>Book Your Free 30-Minute Discovery Call</h2>
+              <p>Use the scheduler below to find a time that works for you. Alternatively, fill out the form and we'll reach out within one business day to coordinate.</p>
+
+              <!-- Google Calendar Appointment Scheduling embed -->
+              <div style="background:var(--gray-light);border:1px solid var(--gray-mid);border-radius:var(--radius-lg);padding:24px 20px;margin-bottom:28px;">
+                <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+                  <span style="background:rgba(107,191,63,.15);width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                    <i class="fa-brands fa-google" style="color:var(--green-dark);font-size:1.1rem;"></i>
+                  </span>
+                  <div>
+                    <h3 style="color:var(--navy);margin:0;font-size:1.05rem;">Schedule with Google Calendar</h3>
+                    <p style="margin:0;font-size:.83rem;color:#5a6a5a;">Pick a time that works for you — instant confirmation</p>
+                  </div>
+                </div>
+                <!-- 
+                  ══════════════════════════════════════════════════
+                  HOW TO EMBED YOUR GOOGLE CALENDAR BOOKING:
+                  1. Go to Google Calendar → Settings → "Appointment schedules"
+                  2. Create a new appointment schedule (30 min, free)
+                  3. Click "Open booking page" → copy the page URL
+                  4. Replace YOUR-GOOGLE-BOOKING-LINK below with that URL
+                     OR paste the full <iframe> embed code here directly
+                  ══════════════════════════════════════════════════
+                -->
+                <iframe
+                  id="google-cal-booking"
+                  src="https://calendar.google.com/calendar/appointments/schedules/YOUR-GOOGLE-BOOKING-LINK"
+                  style="border:0;border-radius:var(--radius-lg);width:100%;min-height:600px;display:block;"
+                  frameborder="0"
+                  title="Book a Discovery Call — RaiseFunders"
+                  loading="lazy"
+                ></iframe>
+                <p style="font-size:.78rem;color:var(--gray);text-align:center;margin-top:10px;">
+                  <i class="fa-solid fa-lock" style="margin-right:4px;color:var(--green-light);"></i>Powered by Google Calendar · Secure · Instant confirmation
+                </p>
+              </div>
+
+              <div class="or-divider">OR fill out the form below</div>
+
+              <!-- Backup form -->
+              <form id="assessmentForm" novalidate>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="first-name">First Name <span style="color:#d9534f;">*</span></label>
+                    <input class="form-control" type="text" id="first-name" name="first_name" placeholder="Jane" required />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="last-name">Last Name <span style="color:#d9534f;">*</span></label>
+                    <input class="form-control" type="text" id="last-name" name="last_name" placeholder="Smith" required />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="email">Email Address <span style="color:#d9534f;">*</span></label>
+                  <input class="form-control" type="email" id="email" name="email" placeholder="jane@yourclub.org" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="phone">Phone Number</label>
+                  <input class="form-control" type="tel" id="phone" name="phone" placeholder="(612) 555-0100" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="org-name">Organization Name <span style="color:#d9534f;">*</span></label>
+                  <input class="form-control" type="text" id="org-name" name="org_name" placeholder="Lakeside Youth Soccer Club" required />
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="org-type">Organization Type</label>
+                    <select class="form-control" id="org-type" name="org_type">
+                      <option value="">Select…</option>
+                      <option>Youth Athletic Club</option>
+                      <option>Association / League</option>
+                      <option>Booster Program</option>
+                      <option>School-Adjacent Sports Group</option>
+                      <option>Other Youth Sports Org</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="sport">Primary Sport</label>
+                    <input class="form-control" type="text" id="sport" name="sport" placeholder="Soccer, Baseball, Hockey…" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="family-count">Approximate Number of Active Families</label>
+                  <select class="form-control" id="family-count" name="family_count">
+                    <option value="">Select a range…</option>
+                    <option>Under 50</option>
+                    <option>50–150</option>
+                    <option>150–300</option>
+                    <option>300–500</option>
+                    <option>500+</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="biggest-challenge">What's your biggest current fundraising or sponsorship challenge?</label>
+                  <textarea class="form-control" id="biggest-challenge" name="challenge" placeholder="Tell us what you're dealing with…" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="preferred-time">Preferred Call Times (optional)</label>
+                  <input class="form-control" type="text" id="preferred-time" name="preferred_time" placeholder="e.g., Weekday mornings, Tuesday afternoons…" />
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">
+                  <i class="fa-solid fa-calendar-check"></i> Request My Discovery Call
+                </button>
+                <p style="font-size:.8rem;color:var(--gray);text-align:center;margin-top:12px;">We'll reach out within one business day to confirm your time. No spam, ever.</p>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logo-wordmark-dark.png"
+               alt="RaiseFunders"
+               height="42"
+               style="margin-bottom:4px;"
+          />
+          <p>Outsourced sponsorship and fundraising for youth athletic organizations. Based in Minneapolis, MN.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="who-we-help.html">Who We Help</a></li>
+            <li><a href="contact.html">Asset Assessment</a></li>
+            <li><a href="book-a-call.html">Book a Call</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 RaiseFunders. All rights reserved. Minneapolis, MN.</p>
+        <div style="display:flex;gap:16px;">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

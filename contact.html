@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact & Free Asset Assessment — RaiseFunders</title>
+  <meta name="description" content="Request a free asset assessment or send a message to the RaiseFunders team. Based in Minneapolis, MN." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .contact-info-card {
+      background: var(--navy);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      position: sticky;
+      top: 100px;
+    }
+    .contact-info-card h3 { color: var(--white); margin-bottom: 24px; }
+    .contact-info-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+    .contact-info-item:last-of-type { border-bottom: none; }
+    .contact-info-icon {
+      width: 40px; height: 40px; flex-shrink: 0;
+      background: rgba(107,191,63,.15);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .95rem;
+      color: var(--green-light);
+    }
+    .contact-info-item h4 { color: rgba(255,255,255,.55); font-size: .75rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; }
+    .contact-info-item p  { color: var(--white); font-size: .93rem; margin: 0; }
+    .contact-info-item a  { color: var(--green-light); }
+
+    .form-card {
+      background: var(--white);
+      border: 1px solid var(--gray-mid);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      box-shadow: var(--shadow-lg);
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-tabs {
+      display: flex;
+      gap: 0;
+      border: 1px solid var(--gray-mid);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: 28px;
+    }
+    .form-tab {
+      flex: 1;
+      padding: 12px;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: .85rem;
+      cursor: pointer;
+      border: none;
+      background: var(--white);
+      color: var(--gray);
+      transition: background var(--transition), color var(--transition);
+    }
+    .form-tab.active { background: var(--navy); color: var(--white); }
+    .form-tab:hover:not(.active) { background: var(--gray-light); color: var(--navy); }
+
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    @media (max-width: 860px) {
+      .contact-layout { grid-template-columns: 1fr; }
+      .contact-info-card { position: static; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .form-card { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo" aria-label="RaiseFunders Home">
+          <img src="images/logo-wordmark-light.png"
+               alt="RaiseFunders"
+               height="46"
+          />
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="who-we-help.html">Who We Help</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a href="contact.html" class="btn btn-secondary btn-sm">Get Assessment</a>
+          <a href="book-a-call.html" class="btn btn-primary btn-sm">Book a Call</a>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle mobile menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-mobile">
+    <a href="index.html">Home</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="who-we-help.html">Who We Help</a>
+    <a href="about.html">About</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="book-a-call.html" class="btn btn-primary">Book a Free Call</a>
+  </div>
+
+  <main id="main-content">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-chevron-right"></i>
+          <span>Contact</span>
+        </div>
+        <span class="section-label section-label--dark">Get in Touch</span>
+        <h1 id="page-title">Request a Free Asset Assessment or Ask Us Anything</h1>
+        <p class="lead">Whether you want a free assessment of your organization's sponsorship assets or you just have a question—we're here. Real people, real responses.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT LAYOUT -->
+    <section class="section">
+      <div class="container">
+        <div class="contact-layout">
+
+          <!-- INFO SIDEBAR -->
+          <aside>
+            <div class="contact-info-card">
+              <h3>Get in Touch</h3>
+              <div class="contact-info-item">
+                <div class="contact-info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div>
+                  <h4>Location</h4>
+                  <p>Minneapolis, MN<br>Serving organizations nationwide</p>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-info-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div>
+                  <h4>Email</h4>
+                  <p><a href="mailto:hello@raisefunders.com">hello@raisefunders.com</a></p>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-info-icon"><i class="fa-regular fa-clock"></i></div>
+                <div>
+                  <h4>Response Time</h4>
+                  <p>Within 1 business day</p>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-info-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                <div>
+                  <h4>Discovery Calls</h4>
+                  <p>Available weekday mornings &amp; afternoons CT</p>
+                </div>
+              </div>
+            </div>
+
+            <div style="background:var(--gray-light);border:1px solid var(--gray-mid);border-radius:var(--radius-lg);padding:24px;margin-top:20px;">
+              <h4 style="color:var(--navy);margin-bottom:14px;"><i class="fa-solid fa-bolt" style="color:var(--green-light);margin-right:8px;"></i>Fastest Route</h4>
+              <p style="font-size:.88rem;color:#5a6a5a;margin-bottom:16px;">Want to move quickly? Book a free discovery call directly and skip the back-and-forth.</p>
+              <a href="book-a-call.html" class="btn btn-primary" style="width:100%;justify-content:center;">Book a Discovery Call</a>
+            </div>
+          </aside>
+
+          <!-- FORM CARD -->
+          <div>
+            <div class="form-card">
+              <div class="form-tabs" role="tablist">
+                <button class="form-tab active" role="tab" aria-selected="true" data-tab="assessment">Free Asset Assessment</button>
+                <button class="form-tab" role="tab" aria-selected="false" data-tab="general">General Question</button>
+              </div>
+
+              <!-- Asset Assessment Form -->
+              <div class="tab-panel active" id="tab-assessment">
+                <h3 style="color:var(--navy);margin-bottom:8px;">Get Your Free Asset Assessment</h3>
+                <p style="color:#5a6a5a;font-size:.93rem;margin-bottom:24px;">Tell us about your organization and we'll give you a preliminary read on your sponsorship potential—completely free, no strings attached.</p>
+                <form id="assessmentForm" novalidate>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label class="form-label" for="a-first">First Name <span style="color:#d9534f;">*</span></label>
+                      <input class="form-control" type="text" id="a-first" name="first_name" placeholder="Jane" required />
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="a-last">Last Name <span style="color:#d9534f;">*</span></label>
+                      <input class="form-control" type="text" id="a-last" name="last_name" placeholder="Smith" required />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="a-email">Email Address <span style="color:#d9534f;">*</span></label>
+                    <input class="form-control" type="email" id="a-email" name="email" placeholder="jane@yourclub.org" required />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="a-org">Organization Name <span style="color:#d9534f;">*</span></label>
+                    <input class="form-control" type="text" id="a-org" name="org_name" placeholder="Lakeside Youth Soccer Club" required />
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label class="form-label" for="a-type">Org Type</label>
+                      <select class="form-control" id="a-type" name="org_type">
+                        <option value="">Select…</option>
+                        <option>Youth Athletic Club</option>
+                        <option>Association / League</option>
+                        <option>Booster Program</option>
+                        <option>School-Adjacent Sports Group</option>
+                        <option>Other</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="a-families">Active Families</label>
+                      <select class="form-control" id="a-families" name="family_count">
+                        <option value="">Select a range…</option>
+                        <option>Under 50</option>
+                        <option>50–150</option>
+                        <option>150–300</option>
+                        <option>300–500</option>
+                        <option>500+</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="a-assets">Which assets do you think you have? (check all that apply)</label>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px;">
+                      <label style="display:flex;align-items:center;gap:8px;font-size:.88rem;color:#3a4a3a;cursor:pointer;"><input type="checkbox" name="assets" value="email_list" style="accent-color:var(--green-light);"> Email list</label>
+                      <label style="display:flex;align-items:center;gap:8px;font-size:.88rem;color:#3a4a3a;cursor:pointer;"><input type="checkbox" name="assets" value="events" style="accent-color:var(--green-light);"> Events / tournaments</label>
+                      <label style="display:flex;align-items:center;gap:8px;font-size:.88rem;color:#3a4a3a;cursor:pointer;"><input type="checkbox" name="assets" value="social" style="accent-color:var(--green-light);"> Social media channels</label>
+                      <label style="display:flex;align-items:center;gap:8px;font-size:.88rem;color:#3a4a3a;cursor:pointer;"><input type="checkbox" name="assets" value="facilities" style="accent-color:var(--green-light);"> Facilities / signage</label>
+                      <label style="display:flex;align-items:center;gap:8px;font-size:.88rem;color:#3a4a3a;cursor:pointer;"><input type="checkbox" name="assets" value="website" style="accent-color:var(--green-light);"> Website traffic</label>
+                      <label style="display:flex;align-items:center;gap:8px;font-size:.88rem;color:#3a4a3a;cursor:pointer;"><input type="checkbox" name="assets" value="uniforms" style="accent-color:var(--green-light);"> Uniforms / apparel</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="a-notes">Anything else we should know?</label>
+                    <textarea class="form-control" id="a-notes" name="notes" rows="3" placeholder="Current sponsorship situation, goals, timing, questions…"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">
+                    <i class="fa-solid fa-paper-plane"></i> Request Free Assessment
+                  </button>
+                  <p style="font-size:.8rem;color:var(--gray);text-align:center;margin-top:10px;">We'll respond within 1 business day. No spam, ever.</p>
+                </form>
+              </div>
+
+              <!-- General Contact Form -->
+              <div class="tab-panel" id="tab-general">
+                <h3 style="color:var(--navy);margin-bottom:8px;">Send Us a Message</h3>
+                <p style="color:#5a6a5a;font-size:.93rem;margin-bottom:24px;">Have a question, comment, or want to learn more? We're happy to help.</p>
+                <form id="contactForm" novalidate>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label class="form-label" for="c-first">First Name <span style="color:#d9534f;">*</span></label>
+                      <input class="form-control" type="text" id="c-first" name="first_name" placeholder="Jane" required />
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="c-last">Last Name <span style="color:#d9534f;">*</span></label>
+                      <input class="form-control" type="text" id="c-last" name="last_name" placeholder="Smith" required />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="c-email">Email Address <span style="color:#d9534f;">*</span></label>
+                    <input class="form-control" type="email" id="c-email" name="email" placeholder="jane@yourclub.org" required />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="c-org">Organization (optional)</label>
+                    <input class="form-control" type="text" id="c-org" name="org_name" placeholder="Your club or organization" />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="c-subject">Subject <span style="color:#d9534f;">*</span></label>
+                    <select class="form-control" id="c-subject" name="subject" required>
+                      <option value="">Select a topic…</option>
+                      <option>General inquiry</option>
+                      <option>Pricing question</option>
+                      <option>Partnership inquiry</option>
+                      <option>Press or media</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="c-message">Message <span style="color:#d9534f;">*</span></label>
+                    <textarea class="form-control" id="c-message" name="message" rows="5" placeholder="How can we help?" required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">
+                    <i class="fa-solid fa-paper-plane"></i> Send Message
+                  </button>
+                  <p style="font-size:.8rem;color:var(--gray);text-align:center;margin-top:10px;">We respond within 1 business day.</p>
+                </form>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logo-wordmark-dark.png"
+               alt="RaiseFunders"
+               height="42"
+               style="margin-bottom:4px;"
+          />
+          <p>Outsourced sponsorship and fundraising for youth athletic organizations. Based in Minneapolis, MN.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="who-we-help.html">Who We Help</a></li>
+            <li><a href="contact.html">Asset Assessment</a></li>
+            <li><a href="book-a-call.html">Book a Call</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 RaiseFunders. All rights reserved. Minneapolis, MN.</p>
+        <div style="display:flex;gap:16px;">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Tab switching
+    document.querySelectorAll('.form-tab').forEach(function(tab) {
+      tab.addEventListener('click', function() {
+        document.querySelectorAll('.form-tab').forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected','true');
+        document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

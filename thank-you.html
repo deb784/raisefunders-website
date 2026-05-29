@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You — RaiseFunders</title>
+  <meta name="description" content="Thank you for reaching out to RaiseFunders. We'll be in touch within one business day." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .thankyou-hero {
+      min-height: 100vh;
+      background: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .thankyou-hero::before {
+      content: '';
+      position: absolute;
+      top: -30%; right: -10%;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(107,191,63,.18) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .thankyou-hero::after {
+      content: '';
+      position: absolute;
+      bottom: -20%; left: -10%;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(45,107,26,.15) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .thankyou-content {
+      text-align: center;
+      max-width: 640px;
+      position: relative;
+      z-index: 2;
+      padding: 40px 24px;
+    }
+    .thankyou-icon {
+      width: 96px; height: 96px;
+      border-radius: 50%;
+      background: rgba(107,191,63,.15);
+      border: 3px solid var(--green-light);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.5rem;
+      color: var(--green-light);
+      margin: 0 auto 32px;
+      animation: pulse-ring 2s ease-out infinite;
+    }
+    @keyframes pulse-ring {
+      0%   { box-shadow: 0 0 0 0 rgba(107,191,63,.4); }
+      70%  { box-shadow: 0 0 0 20px rgba(107,191,63,0); }
+      100% { box-shadow: 0 0 0 0 rgba(107,191,63,0); }
+    }
+    .thankyou-content h1 { color: var(--white); margin-bottom: 16px; }
+    .thankyou-content p  { color: rgba(255,255,255,.75); font-size: 1.05rem; margin-bottom: 12px; }
+    .thankyou-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      margin: 32px 0;
+      text-align: left;
+    }
+    .thankyou-step {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: .93rem;
+      color: rgba(255,255,255,.8);
+    }
+    .thankyou-step-num {
+      width: 28px; height: 28px; flex-shrink: 0;
+      border-radius: 50%;
+      background: var(--green-light);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: .8rem;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .thankyou-nav {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+    .thankyou-logo {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 1.4rem;
+      color: var(--white);
+      margin-bottom: 48px;
+      display: block;
+    }
+    .thankyou-logo span { color: var(--green-light); }
+  </style>
+</head>
+<body>
+
+  <main id="main-content">
+    <section class="thankyou-hero" aria-labelledby="thankyou-heading">
+      <div class="thankyou-content">
+        <a href="index.html" class="thankyou-logo"><span>$raise</span>funders</a>
+        <div class="thankyou-icon"><i class="fa-solid fa-check"></i></div>
+        <h1 id="thankyou-heading">You're All Set!</h1>
+        <p>Thank you for reaching out to RaiseFunders. We've received your message and will respond within <strong style="color:var(--green-light);">one business day.</strong></p>
+        <p>In the meantime, here's what happens next:</p>
+        <div class="thankyou-steps">
+          <div class="thankyou-step">
+            <div class="thankyou-step-num">1</div>
+            <span>A member of our team reviews your submission and researches your organization.</span>
+          </div>
+          <div class="thankyou-step">
+            <div class="thankyou-step-num">2</div>
+            <span>We reach out by email (within 1 business day) to confirm details and schedule your free discovery call.</span>
+          </div>
+          <div class="thankyou-step">
+            <div class="thankyou-step-num">3</div>
+            <span>On the call, we walk through your assets, give you a preliminary revenue estimate, and answer any questions you have.</span>
+          </div>
+        </div>
+        <div class="thankyou-nav">
+          <a href="index.html" class="btn btn-white btn-lg">Back to Home</a>
+          <a href="how-it-works.html" class="btn btn-outline-white btn-lg">Learn How It Works</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

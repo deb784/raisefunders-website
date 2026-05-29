@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Who We Help — RaiseFunders</title>
+  <meta name="description" content="RaiseFunders serves youth athletic clubs, associations, booster programs, and school-adjacent sports groups. See if your organization is a good fit." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .audience-card {
+      background: var(--white);
+      border: 1px solid var(--gray-mid);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .audience-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+    .audience-card-header {
+      background: var(--navy);
+      padding: 28px 28px 24px;
+      position: relative;
+    }
+    .audience-card-header .card-icon {
+      width: 56px; height: 56px;
+      background: rgba(107,191,63,.2);
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+      color: var(--green-light);
+      margin-bottom: 16px;
+    }
+    .audience-card-header h3 { color: var(--white); margin-bottom: 8px; }
+    .audience-card-header p  { color: rgba(255,255,255,.7); font-size: .9rem; margin: 0; }
+    .audience-card-body { padding: 24px 28px; }
+    .audience-card-body h4 { font-size: .82rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 14px; }
+    .fit-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 50px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: .75rem;
+      margin-bottom: 20px;
+    }
+    .fit-badge--yes { background: rgba(107,191,63,.12); color: var(--green-dark); border: 1px solid rgba(107,191,63,.3); }
+    .audience-card-photo {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      object-position: center 20%;
+      display: block;
+      border-bottom: 3px solid var(--green-light);
+    }
+    .not-fit-section {
+      background: var(--gray-light);
+      border: 1px solid var(--gray-mid);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+    }
+    .not-fit-section h3 { color: var(--navy); margin-bottom: 8px; }
+    .not-fit-section > p { color: #5a6a5a; margin-bottom: 24px; }
+    .not-fit-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .not-fit-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .9rem;
+      color: #5a6a5a;
+    }
+    .not-fit-item i { color: #aaa; margin-top: 3px; flex-shrink: 0; }
+    @media (max-width: 640px) {
+      .not-fit-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo" aria-label="RaiseFunders Home">
+          <img src="images/logo-wordmark-light.png"
+               alt="RaiseFunders"
+               height="46"
+          />
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="who-we-help.html">Who We Help</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a href="contact.html" class="btn btn-secondary btn-sm">Get Assessment</a>
+          <a href="book-a-call.html" class="btn btn-primary btn-sm">Book a Call</a>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle mobile menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-mobile">
+    <a href="index.html">Home</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="who-we-help.html">Who We Help</a>
+    <a href="about.html">About</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="book-a-call.html" class="btn btn-primary">Book a Free Call</a>
+  </div>
+
+  <main id="main-content">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-chevron-right"></i>
+          <span>Who We Help</span>
+        </div>
+        <span class="section-label section-label--dark">Our Clients</span>
+        <h1 id="page-title">Built Specifically for Youth Sports Organizations</h1>
+        <p class="lead">We don't serve everyone—we serve youth athletics. That focus makes us better at what we do and more credible to the sponsors you're trying to reach.</p>
+      </div>
+    </section>
+
+    <!-- SELF-IDENTIFY -->
+    <section class="section section--gray">
+      <div class="container">
+        <div class="section-intro centered">
+          <span class="section-label">Who We Serve</span>
+          <h2>Find Your Organization</h2>
+          <p>RaiseFunders works with any youth sports organization that has community presence, engaged families, and assets worth packaging. Here's who we work with most.</p>
+        </div>
+        <div class="grid-2" style="grid-template-columns:repeat(2,1fr);gap:28px;">
+
+          <article class="audience-card">
+            <img
+              src="images/youth-baseball.jpg"
+              alt="Youth baseball team smiling in their uniforms"
+              class="audience-card-photo"
+            />
+            <div class="audience-card-header">
+              <div class="card-icon"><i class="fa-solid fa-futbol"></i></div>
+              <h3>Youth Athletic Clubs</h3>
+              <p>Soccer, baseball, softball, basketball, hockey, lacrosse, volleyball, swimming—if you run a competitive youth club, you almost certainly have untapped sponsorship assets.</p>
+            </div>
+            <div class="audience-card-body">
+              <span class="fit-badge fit-badge--yes"><i class="fa-solid fa-check"></i> Strong Fit</span>
+              <h4>Common Assets We Find</h4>
+              <ul class="check-list">
+                <li><i class="fa-solid fa-check-circle"></i> Large email lists of engaged sports families</li>
+                <li><i class="fa-solid fa-check-circle"></i> Tournaments and showcase events</li>
+                <li><i class="fa-solid fa-check-circle"></i> Team uniforms and practice gear</li>
+                <li><i class="fa-solid fa-check-circle"></i> Social media channels with local reach</li>
+                <li><i class="fa-solid fa-check-circle"></i> Facilities, fields, and gym signage</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="audience-card">
+            <img
+              src="images/youth-basketball.jpg"
+              alt="Youth basketball team with coaches in the gym"
+              class="audience-card-photo"
+            />
+            <div class="audience-card-header">
+              <div class="card-icon"><i class="fa-solid fa-sitemap"></i></div>
+              <h3>Associations & Leagues</h3>
+              <p>Regional and local youth sports associations that govern multiple teams, manage registrations, and host league-wide events across a season.</p>
+            </div>
+            <div class="audience-card-body">
+              <span class="fit-badge fit-badge--yes"><i class="fa-solid fa-check"></i> Strong Fit</span>
+              <h4>Common Assets We Find</h4>
+              <ul class="check-list">
+                <li><i class="fa-solid fa-check-circle"></i> Multi-team email databases across member clubs</li>
+                <li><i class="fa-solid fa-check-circle"></i> Playoffs, championships, and all-star events</li>
+                <li><i class="fa-solid fa-check-circle"></i> Association website and registration platform</li>
+                <li><i class="fa-solid fa-check-circle"></i> Multiple facility locations across a region</li>
+                <li><i class="fa-solid fa-check-circle"></i> High community name recognition</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="audience-card">
+            <img
+              src="images/youth-track.jpg"
+              alt="Youth track and field meet with kids at starting blocks and a volunteer coordinator"
+              class="audience-card-photo"
+              style="object-position: center 35%;"
+            />
+            <div class="audience-card-header">
+              <div class="card-icon"><i class="fa-solid fa-people-group"></i></div>
+              <h3>Booster Programs & Volunteer Boards</h3>
+              <p>Parent-led booster clubs and volunteer boards that support a school or community athletic program and struggle with consistent fundraising year over year.</p>
+            </div>
+            <div class="audience-card-body">
+              <span class="fit-badge fit-badge--yes"><i class="fa-solid fa-check"></i> Strong Fit</span>
+              <h4>Why Boosters Are a Great Fit</h4>
+              <ul class="check-list">
+                <li><i class="fa-solid fa-check-circle"></i> High volunteer burnout—this is exactly the problem we solve</li>
+                <li><i class="fa-solid fa-check-circle"></i> Existing community trust and school-name recognition</li>
+                <li><i class="fa-solid fa-check-circle"></i> Season events, banquets, and recognition nights</li>
+                <li><i class="fa-solid fa-check-circle"></i> Student-athlete email/social following</li>
+                <li><i class="fa-solid fa-check-circle"></i> Need for systems that survive board turnover</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="audience-card">
+            <img
+              src="images/youth-soccer-club.jpg"
+              alt="Youth soccer club team lined up together on the field"
+              class="audience-card-photo"
+              style="object-position: center 25%;"
+            />
+            <div class="audience-card-header">
+              <div class="card-icon"><i class="fa-solid fa-star"></i></div>
+              <h3>School-Adjacent Sports Groups</h3>
+              <p>Club teams, travel programs, or feeder organizations connected to a school or district that operate independently but have strong school-community ties.</p>
+            </div>
+            <div class="audience-card-body">
+              <span class="fit-badge fit-badge--yes"><i class="fa-solid fa-check"></i> Strong Fit</span>
+              <h4>What Makes These Organizations Attractive</h4>
+              <ul class="check-list">
+                <li><i class="fa-solid fa-check-circle"></i> Strong community identity and local brand recognition</li>
+                <li><i class="fa-solid fa-check-circle"></i> Captive local family audience—sponsors love this</li>
+                <li><i class="fa-solid fa-check-circle"></i> Active social media tied to school pride</li>
+                <li><i class="fa-solid fa-check-circle"></i> Recurring events with high family attendance</li>
+                <li><i class="fa-solid fa-check-circle"></i> Clearly defined geography for local sponsor targeting</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PAIN POINTS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-intro centered">
+          <span class="section-label">Sound Familiar?</span>
+          <h2>The Pain Points We Hear Most Often</h2>
+          <p>We've had hundreds of conversations with club directors and booster leaders. These are the frustrations that come up in almost every call.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-icon"><i class="fa-solid fa-battery-empty"></i></div>
+            <h3>Volunteer Burnout is Real</h3>
+            <p>"We keep asking the same five people to do everything. They're exhausted, and we lose them every couple of years."</p>
+          </div>
+          <div class="card">
+            <div class="card-icon"><i class="fa-solid fa-calendar-xmark"></i></div>
+            <h3>Fundraising Resets Every Season</h3>
+            <p>"Every year we're basically starting over. No process, no records, no relationships—just whoever steps up this season."</p>
+          </div>
+          <div class="card">
+            <div class="card-icon"><i class="fa-solid fa-dollar-sign"></i></div>
+            <h3>Skeptical of Upfront Costs</h3>
+            <p>"We've been burned by consultants before. We paid for a plan and never saw results. We can't afford to gamble again."</p>
+          </div>
+          <div class="card">
+            <div class="card-icon"><i class="fa-solid fa-question"></i></div>
+            <h3>Don't Know What to Sell</h3>
+            <p>"We know we have some value to sponsors, but we don't know how to price it or present it in a way that gets a yes."</p>
+          </div>
+          <div class="card">
+            <div class="card-icon"><i class="fa-solid fa-phone-volume"></i></div>
+            <h3>No One to Make the Calls</h3>
+            <p>"We know we should be reaching out to businesses, but no one has the time—and cold calling isn't anyone's idea of fun."</p>
+          </div>
+          <div class="card">
+            <div class="card-icon"><i class="fa-solid fa-rotate"></i></div>
+            <h3>Board Turnover Kills Progress</h3>
+            <p>"Our best fundraiser left the board last spring. Everything she knew walked out with her. We're rebuilding from nothing."</p>
+          </div>
+        </div>
+        <div class="text-center mt-48" style="background:var(--gray-light);border-radius:var(--radius-lg);padding:40px;">
+          <h3 style="color:var(--navy);margin-bottom:12px;">If any of these hit close to home, we should talk.</h3>
+          <p style="color:#5a6a5a;max-width:520px;margin:0 auto 24px;">A free discovery call takes 30 minutes and costs you nothing. You'll walk away with a clearer picture of what your organization could realistically generate from sponsorships.</p>
+          <a href="book-a-call.html" class="btn btn-primary btn-lg"><i class="fa-solid fa-calendar-check"></i> Book a Free Discovery Call</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOT A FIT -->
+    <section class="section section--gray">
+      <div class="container" style="max-width:860px;">
+        <div class="not-fit-section">
+          <span class="section-label">Transparency Matters</span>
+          <h3>We Might Not Be the Right Fit If…</h3>
+          <p>We'd rather tell you upfront than waste your time. Here are situations where a RaiseFunders engagement may not make sense:</p>
+          <div class="not-fit-grid">
+            <div class="not-fit-item"><i class="fa-solid fa-minus-circle"></i><span>Your organization has fewer than 50 active families and limited community presence</span></div>
+            <div class="not-fit-item"><i class="fa-solid fa-minus-circle"></i><span>You're looking for a one-time fundraising event, not a structured sponsorship program</span></div>
+            <div class="not-fit-item"><i class="fa-solid fa-minus-circle"></i><span>Your board is unwilling to provide access to basic assets (email list, analytics)</span></div>
+            <div class="not-fit-item"><i class="fa-solid fa-minus-circle"></i><span>You need immediate revenue this month—our process takes 60–90 days to see first results</span></div>
+            <div class="not-fit-item"><i class="fa-solid fa-minus-circle"></i><span>Your organization is not a youth athletic program (we specialize exclusively in youth sports)</span></div>
+            <div class="not-fit-item"><i class="fa-solid fa-minus-circle"></i><span>You're looking for a tool or software to manage sponsorships yourself—we are a people-powered service</span></div>
+          </div>
+          <p style="margin-top:24px;font-size:.92rem;color:#5a6a5a;"><strong style="color:var(--navy);">Still not sure?</strong> Book a free call—we'll give you an honest answer about whether we're the right fit for your organization.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band">
+      <div class="container text-center" style="position:relative;z-index:1;">
+        <span class="section-label section-label--dark">Let's Talk</span>
+        <h2>Not Sure If You Qualify? Let's Find Out Together.</h2>
+        <p>A free 30-minute discovery call is the fastest way to determine whether your organization has the assets, audience, and timing to make a RaiseFunders partnership work. No commitment required.</p>
+        <div class="btn-group">
+          <a href="book-a-call.html" class="btn btn-primary btn-lg"><i class="fa-solid fa-calendar-check"></i> Book a Free Discovery Call</a>
+          <a href="contact.html" class="btn btn-outline-white btn-lg">Get a Free Asset Assessment</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logo-wordmark-dark.png"
+               alt="RaiseFunders"
+               height="42"
+               style="margin-bottom:4px;"
+          />
+          <p>Outsourced sponsorship and fundraising for youth athletic organizations. Based in Minneapolis, MN.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="who-we-help.html">Who We Help</a></li>
+            <li><a href="contact.html">Asset Assessment</a></li>
+            <li><a href="book-a-call.html">Book a Call</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 RaiseFunders. All rights reserved. Minneapolis, MN.</p>
+        <div style="display:flex;gap:16px;">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

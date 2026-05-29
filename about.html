@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — RaiseFunders</title>
+  <meta name="description" content="RaiseFunders is an outsourced sponsorship partner built by people who've lived youth sports from the inside. Based in Minneapolis, MN." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .team-card {
+      background: var(--white);
+      border: 1px solid var(--gray-mid);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .team-card-top {
+      background: var(--navy);
+      padding: 32px 28px 24px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .team-avatar {
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--green-light), var(--green-dark));
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 1.6rem;
+      color: var(--white);
+      flex-shrink: 0;
+      border: 3px solid rgba(107,191,63,.4);
+    }
+    .team-card-top h3 { color: var(--white); margin-bottom: 4px; font-size: 1.1rem; }
+    .team-card-top span { color: var(--green-light); font-size: .85rem; font-family: 'Montserrat', sans-serif; font-weight: 600; }
+    .team-card-body { padding: 24px 28px; }
+    .team-card-body p { font-size: .92rem; color: #4a5a4a; margin-bottom: 16px; }
+    .team-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+
+    .value-block {
+      display: flex;
+      gap: 20px;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--gray-mid);
+    }
+    .value-block:last-child { border-bottom: none; }
+    .value-icon {
+      width: 52px; height: 52px; flex-shrink: 0;
+      background: rgba(107,191,63,.1);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+      color: var(--green-dark);
+    }
+    .value-block h4 { color: var(--navy); margin-bottom: 6px; }
+    .value-block p  { font-size: .93rem; color: #5a6a5a; margin: 0; }
+
+    .story-quote {
+      background: var(--navy);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      position: relative;
+    }
+    .story-quote::before {
+      content: '"';
+      position: absolute;
+      top: 16px; left: 32px;
+      font-size: 5rem;
+      color: rgba(107,191,63,.3);
+      font-family: Georgia, serif;
+      line-height: 1;
+    }
+    .story-quote p {
+      color: rgba(255,255,255,.85);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      font-style: italic;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+      padding-top: 24px;
+    }
+    .story-quote-attr {
+      color: var(--green-light);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: .88rem;
+    }
+
+    .diff-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .diff-item {
+      text-align: center;
+      padding: 32px 24px;
+      background: var(--white);
+      border: 1px solid var(--gray-mid);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+    }
+    .diff-item-icon {
+      width: 64px; height: 64px;
+      border-radius: 50%;
+      background: rgba(107,191,63,.1);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem;
+      color: var(--green-dark);
+      margin: 0 auto 18px;
+    }
+    .diff-item h4 { color: var(--navy); margin-bottom: 8px; }
+    .diff-item p  { font-size: .9rem; color: #5a6a5a; margin: 0; }
+
+    @media (max-width: 768px) {
+      .diff-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo" aria-label="RaiseFunders Home">
+          <img src="images/logo-wordmark-light.png"
+               alt="RaiseFunders"
+               height="46"
+          />
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="who-we-help.html">Who We Help</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a href="contact.html" class="btn btn-secondary btn-sm">Get Assessment</a>
+          <a href="book-a-call.html" class="btn btn-primary btn-sm">Book a Call</a>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle mobile menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-mobile">
+    <a href="index.html">Home</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="who-we-help.html">Who We Help</a>
+    <a href="about.html">About</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="book-a-call.html" class="btn btn-primary">Book a Free Call</a>
+  </div>
+
+  <main id="main-content">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-chevron-right"></i>
+          <span>About</span>
+        </div>
+        <span class="section-label section-label--dark">Our Story</span>
+        <h1 id="page-title">We Built This Because We've Lived It</h1>
+        <p class="lead">RaiseFunders exists because our team spent decades inside youth sports organizations—coaching, serving on boards, running booster programs—and saw the same fundraising problems repeat themselves everywhere.</p>
+      </div>
+    </section>
+
+    <!-- ORIGIN STORY -->
+    <section class="section">
+      <div class="container">
+        <div class="grid-2">
+          <div>
+            <span class="section-label">Who We Are</span>
+            <h2>RaiseFunders — Minneapolis, MN</h2>
+            <p class="lead mt-16">RaiseFunders is an outsourced fundraising and sponsorship partner built specifically for youth athletic organizations.</p>
+            <p>We help clubs, associations, and booster programs unlock the value of the assets they already have—email lists, facilities, events, social media reach, and community loyalty—and turn them into structured, professional sponsorship opportunities.</p>
+            <p>Our team develops the marketing strategy, packages the assets, and secures local and regional sponsors—allowing directors and volunteers to stay focused on what matters most: <strong>the athletes and the game.</strong></p>
+            <p>We understand youth sports from the inside out because we've lived it. Our team has coached multiple youth sports for a combined total of more than 65 seasons, served on club boards, chaired booster programs, and navigated every operational headache that comes with running a volunteer-powered organization.</p>
+          </div>
+          <div>
+            <div class="story-quote">
+              <p>"We kept seeing the same thing everywhere: clubs with real community value and loyal families, but no system to turn that into sponsor revenue. Directors and parents doing their best, burning out, and starting over from scratch every year. That gap shouldn't exist."</p>
+              <div class="story-quote-attr">— The RaiseFunders Team, Minneapolis, MN</div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px;">
+              <div style="background:var(--gray-light);border:1px solid var(--gray-mid);border-radius:var(--radius);padding:20px;text-align:center;">
+                <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:2rem;color:var(--green-light);">65+</div>
+                <div style="font-size:.85rem;color:var(--gray);font-weight:600;margin-top:4px;">Combined seasons in youth sports</div>
+              </div>
+              <div style="background:var(--gray-light);border:1px solid var(--gray-mid);border-radius:var(--radius);padding:20px;text-align:center;">
+                <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:2rem;color:var(--green-light);">100%</div>
+                <div style="font-size:.85rem;color:var(--gray);font-weight:600;margin-top:4px;">Focus on youth athletics</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR PHILOSOPHY -->
+    <section class="section section--gray">
+      <div class="container">
+        <div class="section-intro centered">
+          <span class="section-label">Our Philosophy</span>
+          <h2>Athletes First. Admin Second.</h2>
+          <p>Everything we do is designed to keep coaches and volunteers focused on the kids—not on spreadsheets, cold calls, and sponsor management. Here's what we believe.</p>
+        </div>
+        <div class="grid-2" style="max-width:900px;margin:0 auto;">
+          <div>
+            <div class="value-block">
+              <div class="value-icon"><i class="fa-solid fa-child-reaching"></i></div>
+              <div>
+                <h4>Youth Sports Matter</h4>
+                <p>Athletic programs build character, discipline, and community. The adults running them deserve support systems that make the mission sustainable.</p>
+              </div>
+            </div>
+            <div class="value-block">
+              <div class="value-icon"><i class="fa-solid fa-handshake"></i></div>
+              <div>
+                <h4>Credibility Comes from Experience</h4>
+                <p>We don't just know sponsorship strategy—we know what it's like to be the exhausted parent who ended up owning fundraising by default. That changes how we show up for our clients.</p>
+              </div>
+            </div>
+            <div class="value-block">
+              <div class="value-icon"><i class="fa-solid fa-shield"></i></div>
+              <div>
+                <h4>No Hype. Just Results.</h4>
+                <p>We're not going to oversell what we can deliver. You'll get honest projections, clear timelines, and direct communication when things shift. Trust is earned, not assumed.</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="value-block">
+              <div class="value-icon"><i class="fa-solid fa-rotate"></i></div>
+              <div>
+                <h4>Systems Outlast People</h4>
+                <p>Board turnover is a fact of life in youth sports. Everything we build is designed to be documented, transferable, and maintainable—not dependent on any single individual.</p>
+              </div>
+            </div>
+            <div class="value-block">
+              <div class="value-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
+              <div>
+                <h4>Performance Alignment Matters</h4>
+                <p>Our compensation structure ties our earnings to yours. We don't win unless you win. That's not just good ethics—it's good business design.</p>
+              </div>
+            </div>
+            <div class="value-block">
+              <div class="value-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <h4>Local Matters</h4>
+                <p>Based in Minneapolis, we understand the Midwest community fabric that makes local sponsorships work. And our approach scales to organizations across the country.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- DIFFERENTIATORS -->
+    <section class="section section--navy">
+      <div class="container">
+        <div class="section-intro centered">
+          <span class="section-label section-label--dark">Why Different</span>
+          <h2 class="text-white">How We're Different from the Alternatives</h2>
+          <p style="color:rgba(255,255,255,.75);">There are other options out there. Here's why RaiseFunders is built differently—and why it matters for youth sports organizations specifically.</p>
+        </div>
+        <div class="diff-row">
+          <div class="diff-item">
+            <div class="diff-item-icon"><i class="fa-solid fa-robot"></i></div>
+            <h4>vs. Self-Serve Tools</h4>
+            <p>Software platforms give you a tool. We give you execution. There's a meaningful difference between having a platform and having a team that runs the program for you.</p>
+          </div>
+          <div class="diff-item">
+            <div class="diff-item-icon"><i class="fa-solid fa-building-columns"></i></div>
+            <h4>vs. Generic Agencies</h4>
+            <p>Most marketing agencies don't understand volunteer boards, booster dynamics, or youth sports culture. We do. That insider context changes how we package, pitch, and close sponsors on your behalf.</p>
+          </div>
+          <div class="diff-item">
+            <div class="diff-item-icon"><i class="fa-solid fa-person-chalkboard"></i></div>
+            <h4>vs. Consultants</h4>
+            <p>Consultants give you a plan. We give you a running program. We don't hand you a strategy deck and wish you luck—we stay engaged from discovery through outreach and closing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band">
+      <div class="container text-center" style="position:relative;z-index:1;">
+        <span class="section-label section-label--dark">Work With Us</span>
+        <h2>Let's Build Something Lasting for Your Organization</h2>
+        <p>A 30-minute conversation is all it takes to see whether we're the right partner for your club. No pressure, no pitch—just an honest look at what's possible.</p>
+        <div class="btn-group">
+          <a href="book-a-call.html" class="btn btn-primary btn-lg"><i class="fa-solid fa-calendar-check"></i> Book a Free Discovery Call</a>
+          <a href="contact.html" class="btn btn-outline-white btn-lg">Get a Free Asset Assessment</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logo-wordmark-dark.png"
+               alt="RaiseFunders"
+               height="42"
+               style="margin-bottom:4px;"
+          />
+          <p>Outsourced sponsorship and fundraising for youth athletic organizations. Based in Minneapolis, MN.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="who-we-help.html">Who We Help</a></li>
+            <li><a href="contact.html">Asset Assessment</a></li>
+            <li><a href="book-a-call.html">Book a Call</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 RaiseFunders. All rights reserved. Minneapolis, MN.</p>
+        <div style="display:flex;gap:16px;">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

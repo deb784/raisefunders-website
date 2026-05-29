@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How It Works — RaiseFunders</title>
+  <meta name="description" content="Our four-step done-for-you sponsorship process: asset audit, packaging, outreach & closing, and fulfillment support & reporting. See exactly what RaiseFunders does for your youth sports organization." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .phase-block {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 0 32px;
+      position: relative;
+      padding-bottom: 56px;
+    }
+    .phase-block:last-child { padding-bottom: 0; }
+    .phase-block::after {
+      content: '';
+      position: absolute;
+      top: 80px; left: 39px;
+      width: 2px;
+      bottom: 0;
+      background: linear-gradient(180deg, var(--green-light), transparent);
+    }
+    .phase-block:last-child::after { display: none; }
+    .phase-num-col { display: flex; flex-direction: column; align-items: center; z-index: 1; }
+    .phase-circle {
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      background: var(--green-light);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 1.6rem;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 0 0 8px rgba(107,191,63,.15);
+    }
+    .phase-content { padding-top: 14px; }
+    .phase-content h3 { color: var(--navy); font-size: 1.35rem; margin-bottom: 12px; }
+    .phase-content .lead { font-size: 1rem; color: #4a5a4a; margin-bottom: 24px; }
+    .phase-detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+    .phase-detail {
+      background: var(--gray-light);
+      border: 1px solid var(--gray-mid);
+      border-radius: var(--radius);
+      padding: 20px;
+    }
+    .phase-detail h4 { font-size: .92rem; color: var(--navy); margin-bottom: 8px; }
+    .phase-detail p  { font-size: .88rem; color: #5a6a5a; margin: 0; }
+    .phase-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: .75rem;
+      padding: 5px 12px;
+      border-radius: 50px;
+      margin-bottom: 14px;
+    }
+    .phase-tag--timeline { background: rgba(13,27,42,.07); color: var(--navy); }
+    .responsibility-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 16px;
+    }
+    .resp-col {
+      background: var(--white);
+      border: 1px solid var(--gray-mid);
+      border-radius: var(--radius);
+      padding: 22px;
+    }
+    .resp-col h4 {
+      font-size: .82rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .resp-col--rf h4 { color: var(--green-dark); }
+    .resp-col--you h4 { color: var(--navy); }
+    @media (max-width: 640px) {
+      .phase-block { grid-template-columns: 1fr; }
+      .phase-num-col { flex-direction: row; gap: 16px; margin-bottom: 16px; }
+      .phase-block::after { display: none; }
+      .phase-detail-grid { grid-template-columns: 1fr; }
+      .responsibility-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo" aria-label="RaiseFunders Home">
+          <img src="images/logo-wordmark-light.png"
+               alt="RaiseFunders"
+               height="46"
+          />
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="who-we-help.html">Who We Help</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a href="contact.html" class="btn btn-secondary btn-sm">Get Assessment</a>
+          <a href="book-a-call.html" class="btn btn-primary btn-sm">Book a Call</a>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle mobile menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-mobile">
+    <a href="index.html">Home</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="who-we-help.html">Who We Help</a>
+    <a href="about.html">About</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="book-a-call.html" class="btn btn-primary">Book a Free Call</a>
+  </div>
+
+  <main id="main-content">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-chevron-right"></i>
+          <span>How It Works</span>
+        </div>
+        <span class="section-label section-label--dark">The Process</span>
+        <h1 id="page-title">A Clear, Four-Step Sponsorship System—Built and Run For You</h1>
+        <p class="lead">We handle everything from discovery through closing. Here's exactly what happens after you partner with RaiseFunders—and what you should expect at each phase.</p>
+      </div>
+    </section>
+
+    <!-- SILENT OBJECTION BANNER -->
+    <section style="background:var(--green-dark);padding:28px 0;">
+      <div class="container text-center">
+        <p style="color:var(--white);font-family:'Montserrat',sans-serif;font-weight:700;font-size:1rem;margin:0;">
+          <i class="fa-solid fa-shield-check" style="color:var(--green-light);margin-right:8px;"></i>
+          The most common question we hear: <em style="font-weight:400;">"How much work is this going to create for us?"</em>
+          — Answer: Very little. Keep reading.
+        </p>
+      </div>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section class="section section--gray">
+      <div class="container">
+        <div class="section-intro centered">
+          <span class="section-label">Overview</span>
+          <h2>From Zero to Sponsorship Revenue in Four Focused Phases</h2>
+          <p>Our process is designed around one principle: your board stays focused on athletes and operations while we build and manage the revenue system. Each phase has a defined scope, clear deliverables, and a realistic timeline.</p>
+        </div>
+        <div class="grid-4" style="grid-template-columns:repeat(4,1fr);">
+          <div class="card text-center" style="border-top: 4px solid var(--green-light);">
+            <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:2rem;color:var(--green-light);margin-bottom:8px;">1</div>
+            <h3 style="font-size:1rem;">Asset Discovery & Audit</h3>
+            <p>We map every monetizable asset your organization has.</p>
+            <span class="badge badge-green" style="margin-top:8px;">Weeks 1–2</span>
+          </div>
+          <div class="card text-center" style="border-top: 4px solid var(--green-light);">
+            <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:2rem;color:var(--green-light);margin-bottom:8px;">2</div>
+            <h3 style="font-size:1rem;">Sponsorship Packaging</h3>
+            <p>We build professional, priced sponsorship tiers ready for market.</p>
+            <span class="badge badge-green" style="margin-top:8px;">Weeks 3–4</span>
+          </div>
+          <div class="card text-center" style="border-top: 4px solid var(--green-light);">
+            <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:2rem;color:var(--green-light);margin-bottom:8px;">3</div>
+            <h3 style="font-size:1rem;">Outreach & Closing</h3>
+            <p>We handle every step of the sponsor sales process.</p>
+            <span class="badge badge-green" style="margin-top:8px;">Weeks 4–12+</span>
+          </div>
+          <div class="card text-center" style="border-top: 4px solid var(--green-light);">
+            <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:2rem;color:var(--green-light);margin-bottom:8px;">4</div>
+            <h3 style="font-size:1rem;">Fulfillment Support & Reporting</h3>
+            <p>Your org executes sponsor commitments. We provide tracking tools, checklists, and reporting.</p>
+            <span class="badge badge-green" style="margin-top:8px;">Ongoing</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DETAILED PHASES -->
+    <section class="section">
+      <div class="container" style="max-width:900px;">
+        <div class="section-intro">
+          <span class="section-label">Phase by Phase</span>
+          <h2>What Happens at Each Stage</h2>
+        </div>
+
+        <!-- Phase 1 -->
+        <div class="phase-block">
+          <div class="phase-num-col">
+            <div class="phase-circle">1</div>
+          </div>
+          <div class="phase-content">
+            <span class="phase-tag phase-tag--timeline"><i class="fa-regular fa-clock"></i> Weeks 1–2</span>
+            <h3>Discovery & Asset Audit</h3>
+            <p class="lead">Before we can package anything, we need to understand exactly what your organization has. This phase is about listening, learning, and documenting every asset that could have value to a local or regional sponsor.</p>
+            <div class="phase-detail-grid">
+              <div class="phase-detail">
+                <h4><i class="fa-solid fa-magnifying-glass" style="color:var(--green-light);margin-right:6px;"></i>What We Audit</h4>
+                <p>Email list size & engagement, website traffic, social media channels and reach, events and tournaments, physical facilities, uniforms, and community loyalty signals.</p>
+              </div>
+              <div class="phase-detail">
+                <h4><i class="fa-solid fa-file-chart-column" style="color:var(--green-light);margin-right:6px;"></i>What You Receive</h4>
+                <p>A complete Asset Inventory Report documenting your monetizable assets, estimated market value, and a prioritization framework for packaging.</p>
+              </div>
+            </div>
+            <div class="responsibility-row">
+              <div class="resp-col resp-col--rf">
+                <h4><i class="fa-solid fa-check" style="margin-right:6px;"></i>RaiseFunders Does</h4>
+                <ul class="check-list">
+                  <li><i class="fa-solid fa-check-circle"></i> Conducts onboarding interview with key contact</li>
+                  <li><i class="fa-solid fa-check-circle"></i> Reviews all available digital and physical assets</li>
+                  <li><i class="fa-solid fa-check-circle"></i> Builds the Asset Inventory Report</li>
+                  <li><i class="fa-solid fa-check-circle"></i> Researches local sponsor market potential</li>
+                </ul>
+              </div>
+              <div class="resp-col resp-col--you">
+                <h4><i class="fa-solid fa-user" style="margin-right:6px;"></i>Your Board Does</h4>
+                <ul class="check-list">
+                  <li><i class="fa-solid fa-check-circle"></i> Participates in a 60–90 min onboarding call</li>
+                  <li><i class="fa-solid fa-check-circle"></i> Provides access to email platform & analytics</li>
+                  <li><i class="fa-solid fa-check-circle"></i> Reviews and approves the asset report</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phase 2 -->
+        <div class="phase-block">
+          <div class="phase-num-col">
+            <div class="phase-circle">2</div>
+          </div>
+          <div class="phase-content">
+            <span class="phase-tag phase-tag--timeline"><i class="fa-regular fa-clock"></i> Weeks 3–4</span>
+            <h3>Sponsorship Packaging</h3>
+            <p class="lead">This is where your assets get transformed into sponsor-ready opportunities. We build tiered packages that make it easy for businesses to understand what they're buying, what it costs, and what they get in return.</p>
+            <div class="phase-detail-grid">
+              <div class="phase-detail">
+                <h4><i class="fa-solid fa-layer-group" style="color:var(--green-light);margin-right:6px;"></i>What We Build</h4>
+                <p>Tiered sponsorship packages (e.g., Presenting, Gold, Silver, Community Partner) with defined benefits, pricing, and professional presentation materials for each level.</p>
+              </div>
+              <div class="phase-detail">
+                <h4><i class="fa-solid fa-file-pdf" style="color:var(--green-light);margin-right:6px;"></i>What You Receive</h4>
+                <p>A complete Sponsorship Package Deck and rate card, ready to present to potential sponsors. Clean, professional, and tailored to your organization's identity.</p>
+              </div>
+            </div>
+            <div class="responsibility-row">
+              <div class="resp-col resp-col--rf">
+                <h4><i class="fa-solid fa-check" style="margin-right:6px;"></i>RaiseFunders Does</h4>
+                <ul class="check-list">
+                  <li><i class="fa-solid fa-check-circle"></i> Designs all sponsorship tiers and pricing</li>
+                  <li><i class="fa-solid fa-check-circle"></i> Writes all package copy and benefit descriptions</li>
+                  <li><i class="fa-solid fa-check-circle"></i> Creates professional presentation materials</li>
+                  <li><i class="fa-solid fa-check-circle"></i> Develops the outreach target list</li>
+                </ul>
+              </div>
+              <div class="resp-col resp-col--you">
+                <h4><i class="fa-solid fa-user" style="margin-right:6px;"></i>Your Board Does</h4>
+                <ul class="check-list">
+                  <li><i class="fa-solid fa-check-circle"></i> Reviews and approves packages before outreach</li>
+                  <li><i class="fa-solid fa-check-circle"></i> Provides brand guidelines or logo files</li>
+                  <li><i class="fa-solid fa-check-circle"></i> Suggests any known local sponsor prospects</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phase 3 -->
+        <div class="phase-block">
+          <div class="phase-num-col">
+            <div class="phase-circle">3</div>
+          </div>
+          <div class="phase-content">
+            <span class="phase-tag phase-tag--timeline"><i class="fa-regular fa-clock"></i> Weeks 4–12+</span>
+            <h3>Outreach & Closing</h3>
+            <p class="lead">This is where most organizations stall—and where RaiseFunders adds the most visible value. We manage the entire sponsor sales process from first contact to signed agreement, so your board never has to make a cold call.</p>
+            <div class="phase-detail-grid">
+              <div class="phase-detail">
+                <h4><i class="fa-solid fa-bullseye" style="color:var(--green-light);margin-right:6px;"></i>Our Approach</h4>
+                <p>Targeted outreach to local and regional businesses with a genuine connection to youth sports, families, and community. We use a structured follow-up cadence—not spam blasts.</p>
+              </div>
+              <div class="phase-detail">
+                <h4><i class="fa-solid fa-handshake" style="color:var(--green-light);margin-right:6px;"></i>How We Close</h4>
+                <p>We handle negotiations, answer sponsor questions, prepare agreements, and guide prospects from interested to committed—keeping you informed at every milestone.</p>
+              </div>
+            </div>
+            <div class="responsibility-row">
+              <div class="resp-col resp-col--rf">
+                <h4><i class="fa-solid fa-check" style="margin-right:6px;"></i>RaiseFunders Does</h4>
+                <ul class="check-list">
+                  <li><i class="fa-solid fa-check-circle"></i> Executes full outreach and follow-up campaigns</li>
+                  <li><i class="fa-solid fa-check-circle"></i> Conducts all sponsor conversations and meetings</li>
+                  <li><i class="fa-solid fa-check-circle"></i> Negotiates terms and prepares agreements</li>
+                  <li><i class="fa-solid fa-check-circle"></i> Provides regular pipeline status updates</li>
+                </ul>
+              </div>
+              <div class="resp-col resp-col--you">
+                <h4><i class="fa-solid fa-user" style="margin-right:6px;"></i>Your Board Does</h4>
+                <ul class="check-list">
+                  <li><i class="fa-solid fa-check-circle"></i> Approves final sponsorship agreements</li>
+                  <li><i class="fa-solid fa-check-circle"></i> Signs contracts on behalf of the organization</li>
+                  <li><i class="fa-solid fa-check-circle"></i> Provides updates if circumstances change</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phase 4 -->
+        <div class="phase-block">
+          <div class="phase-num-col">
+            <div class="phase-circle">4</div>
+          </div>
+          <div class="phase-content">
+            <span class="phase-tag phase-tag--timeline"><i class="fa-regular fa-clock"></i> Ongoing</span>
+            <h3>Fulfillment Support & Reporting</h3>
+            <p class="lead">Closing a sponsor is the beginning—not the end. Once a deal is signed, your organization executes the deliverables you agreed to—logos on jerseys, banners at the facility, sponsor recognition on your website, email footer credits, and event acknowledgments. We provide the tools, checklists, and reporting structure to make sure nothing falls through the cracks and that sponsors feel the value of their investment.</p>
+            <div class="phase-detail-grid">
+              <div class="phase-detail">
+                <h4><i class="fa-solid fa-clipboard-check" style="color:var(--green-light);margin-right:6px;"></i>Fulfillment Tracking</h4>
+                <p>We provide a structured checklist of every sponsor deliverable so your team knows exactly what needs to happen, when, and how to document it. Nothing gets lost between board rotations.</p>
+              </div>
+              <div class="phase-detail">
+                <h4><i class="fa-solid fa-chart-line" style="color:var(--green-light);margin-right:6px;"></i>Sponsor Reporting & Renewals</h4>
+                <p>Sponsors receive regular impact reports showing the value of their investment. We manage all renewal conversations and upsell opportunities—so sponsors come back year after year without any board effort.</p>
+              </div>
+            </div>
+            <div class="responsibility-row">
+              <div class="resp-col resp-col--rf">
+                <h4><i class="fa-solid fa-check" style="margin-right:6px;"></i>RaiseFunders Does</h4>
+                <ul class="check-list">
+                  <li><i class="fa-solid fa-check-circle"></i> Provides complete fulfillment checklist & tracking tools</li>
+                  <li><i class="fa-solid fa-check-circle"></i> Produces sponsor impact reports</li>
+                  <li><i class="fa-solid fa-check-circle"></i> Manages all renewal conversations and upsells</li>
+                  <li><i class="fa-solid fa-check-circle"></i> Supports your team with guidance throughout the season</li>
+                </ul>
+              </div>
+              <div class="resp-col resp-col--you">
+                <h4><i class="fa-solid fa-user" style="margin-right:6px;"></i>Your Organization Does</h4>
+                <ul class="check-list">
+                  <li><i class="fa-solid fa-check-circle"></i> Places sponsor logos on uniforms, banners & signage</li>
+                  <li><i class="fa-solid fa-check-circle"></i> Adds sponsor recognition to website & email footer</li>
+                  <li><i class="fa-solid fa-check-circle"></i> Executes event acknowledgments & social mentions</li>
+                  <li><i class="fa-solid fa-check-circle"></i> Reviews quarterly summary reports & approves renewals</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TIMELINE EXPECTATIONS -->
+    <section class="section section--navy">
+      <div class="container">
+        <div class="section-intro centered">
+          <span class="section-label section-label--dark">Realistic Expectations</span>
+          <h2 class="text-white">What to Expect on Your Timeline</h2>
+          <p style="color:rgba(255,255,255,.75);">We believe in honest projections. Here's what a typical engagement looks like from first call to first check—and beyond.</p>
+        </div>
+        <div class="grid-3" style="max-width:900px;margin:0 auto;">
+          <div style="text-align:center;padding:28px 20px;">
+            <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.6rem;color:var(--green-light);margin-bottom:8px;">Day 1–14</div>
+            <h4 style="color:var(--white);margin-bottom:10px;">Onboarding & Audit</h4>
+            <p style="color:rgba(255,255,255,.65);font-size:.9rem;">Discovery call, onboarding, and full asset audit completed. You have a clear picture of your organization's sponsorship value.</p>
+          </div>
+          <div style="text-align:center;padding:28px 20px;border-left:1px solid rgba(255,255,255,.1);border-right:1px solid rgba(255,255,255,.1);">
+            <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.6rem;color:var(--green-light);margin-bottom:8px;">Day 15–30</div>
+            <h4 style="color:var(--white);margin-bottom:10px;">Packages Approved & Outreach Begins</h4>
+            <p style="color:rgba(255,255,255,.65);font-size:.9rem;">Sponsorship packages are finalized, approved, and the first wave of qualified outreach is underway.</p>
+          </div>
+          <div style="text-align:center;padding:28px 20px;">
+            <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.6rem;color:var(--green-light);margin-bottom:8px;">Day 60–90</div>
+            <h4 style="color:var(--white);margin-bottom:10px;">First Sponsor Commitments</h4>
+            <p style="color:rgba(255,255,255,.65);font-size:.9rem;">Most organizations see their first signed sponsor agreements within this window. Results vary by market and season timing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band">
+      <div class="container text-center" style="position:relative;z-index:1;">
+        <span class="section-label section-label--dark">Ready to Start?</span>
+        <h2>See the Process in Action—For Your Organization</h2>
+        <p>A free discovery call is the fastest way to understand what your specific asset base could generate and what a RaiseFunders engagement would look like for your club.</p>
+        <div class="btn-group">
+          <a href="book-a-call.html" class="btn btn-primary btn-lg"><i class="fa-solid fa-calendar-check"></i> Book a Free Discovery Call</a>
+          <a href="faq.html" class="btn btn-outline-white btn-lg">Read the FAQ</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logo-wordmark-dark.png"
+               alt="RaiseFunders"
+               height="42"
+               style="margin-bottom:4px;"
+          />
+          <p>Outsourced sponsorship and fundraising for youth athletic organizations. Based in Minneapolis, MN.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="who-we-help.html">Who We Help</a></li>
+            <li><a href="contact.html">Asset Assessment</a></li>
+            <li><a href="book-a-call.html">Book a Call</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 RaiseFunders. All rights reserved. Minneapolis, MN.</p>
+        <div style="display:flex;gap:16px;">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
