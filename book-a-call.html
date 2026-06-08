@@ -3,13 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B8F27FTXQR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-B8F27FTXQR');
+</script>
+
   <title>Book a Free Discovery Call — RaiseFunders</title>
+  <meta name="description" content="Schedule your free 30-min call. We'll review your assets, estimate your revenue potential & answer every question. Zero pressure, zero commitment." />
+<!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+   <title>Book a Free Discovery Call — RaiseFunders</title>
   <meta name="description" content="Schedule your free 30-min call. We'll review your assets, estimate your revenue potential & answer every question. Zero pressure, zero commitment." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="css/style.css" />
+
+  <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet" />
+
   <style>
     .booking-layout {
       display: grid;
@@ -219,8 +237,8 @@
               <h2>Book Your Free 30-Minute Discovery Call</h2>
               <p>Use the scheduler below to find a time that works for you. Alternatively, fill out the form and we'll reach out within one business day to coordinate.</p>
 
-              <!-- Google Calendar Appointment Scheduling embed -->
-              <div style="background:var(--gray-light);border:1px solid var(--gray-mid);border-radius:var(--radius-lg);padding:24px 20px;margin-bottom:28px;">
+<!-- Google Calendar scheduling button -->
+<div style="background:var(--gray-light);border:1px solid var(--gray-mid);border-radius:var(--radius-lg);padding:24px 20px;margin-bottom:28px;">
                 <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
                   <span style="background:rgba(107,191,63,.15);width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
                     <i class="fa-brands fa-google" style="color:var(--green-dark);font-size:1.1rem;"></i>
@@ -230,23 +248,14 @@
                     <p style="margin:0;font-size:.83rem;color:#5a6a5a;">Pick a time that works for you — instant confirmation</p>
                   </div>
                 </div>
-                <!-- 
-                 -->
-                <iframe
-                  id="google-cal-booking"
-                  src="https://calendar.google.com/calendar/appointments/schedules/YOUR-GOOGLE-BOOKING-LINK"
-                  style="border:0;border-radius:var(--radius-lg);width:100%;min-height:600px;display:block;"
-                  frameborder="0"
-                  title="Book a Discovery Call — RaiseFunders"
-                  loading="lazy"
-                ></iframe>
+                <!-- Google Calendar scheduling button renders here -->
+                <div style="margin:8px 0 4px;"></div>
                 <p style="font-size:.78rem;color:var(--gray);text-align:center;margin-top:10px;">
                   <i class="fa-solid fa-lock" style="margin-right:4px;color:var(--green-light);"></i>Powered by Google Calendar · Secure · Instant confirmation
                 </p>
               </div>
 
               <div class="or-divider">OR fill out the form below</div>
-
               <!-- Backup form -->
               <form id="assessmentForm" name="book-a-call" netlify novalidate>
                 <input type="hidden" name="form-name" value="book-a-call" />
@@ -329,7 +338,7 @@
         <div class="footer-brand">
           <img src="images/logo-wordmark-dark.png"
                alt="RaiseFunders — Youth Sports Sponsorship Partners"
-               height="42"
+               height="50"
                style="margin-bottom:4px;"
           />
           <p>Outsourced sponsorship and fundraising for youth athletic organizations. Based in Minneapolis, MN.</p>
@@ -371,5 +380,25 @@
   </footer>
 
   <script src="js/main.js"></script>
+ <!-- Google Calendar Appointment Scheduling begin -->
+  <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+  <script>
+  (function() {
+    var target = document.currentScript;
+    window.addEventListener('load', function() {
+      calendar.schedulingButton.load({
+        url: 'https://calendar.google.com/calendar/appointments/AcZssZ0Hm-DLWef_IoTCjxP8A2qDRGVCIT9Qv18qnVo=?gv=true',
+        color: '#33B679',
+        label: 'Book an appointment',
+        target,
+      });
+    });
+  })();
+  </script>
+  <!-- end Google Calendar Appointment Scheduling -->
+
 </body>
 </html>
+
+
+
